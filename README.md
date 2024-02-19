@@ -5,10 +5,15 @@ This project provides a data analysis dashboard for US gun-based crimes from 201
 ## Features
 Interactive map showing the distribution of gun-based crime incidents by state.
 Line graph displaying the 12-month incident rate trend for a specific state.
-Pie chart illustrating the gender and age involvement rates in gun-based crimes.
-Bar chart showing the distribution of crime types across counties within a state.
+
 Data Sources
 The dashboard uses publicly available data on gun-based crimes in the US from 2014 to 2018. The data is sourced from [insert data source].
+![image](https://github.com/atnatiyos/US-gun-crime-data-analysis/assets/39485678/02603942-701b-4192-8beb-0aaa00a0c433)
+
+Pie chart illustrating the gender and age involvement rates in gun-based crimes.
+Bar chart showing the distribution of crime types across counties within a state.
+
+![image](https://github.com/atnatiyos/US-gun-crime-data-analysis/assets/39485678/0c24a7ee-97af-4fff-80a8-00c1c9e21878)
 
 ## Technologies Used
 Python
@@ -16,10 +21,10 @@ DASH
 HTML/CSS
 
 ## Setup
-Clone the repository: git clone https://github.com/your_username/your_project.git
+Clone the repository: git clone https://github.com/atnatiyos/US-gun-crime-data-analysis.git
 Install dependencies: pip install -r requirements.txt
 Run the Flask app: python app.py
-Open your browser and navigate to http://localhost:5000 to access the dashboard.
+Open your browser and navigate to http://localhost:8050 to access the dashboard.
 Usage
 Use the map to explore the distribution of gun-based crime incidents across states.
 Select a state to view the 12-month incident rate trend in the line graph.

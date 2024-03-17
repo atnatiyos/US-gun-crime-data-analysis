@@ -1,9 +1,9 @@
 from gc import callbacks
 from msilib.schema import Component
-from optparse import Option
-from pickle import NONE
-from tkinter.ttk import Style
-from turtle import width
+# from optparse import Option
+# from pickle import NONE
+# from tkinter.ttk import Style
+# from turtle import width
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -14,18 +14,6 @@ import state_code
 app = Dash(__name__)
 
 data = pd.read_csv("gun_violance.csv")
-
-#list of US states
-# states_name_code = data[['state','state_code']].drop_duplicates()
-# state_options = []
-# for state in states_name_code.itertuples(index=False):
-#     option = {'label': state.state, 'value': state.state_code}
-#     print(option)
-#     state_options.append(option)
-    
-
-#incidents = data.groupby(['state','state_code','year'])['incident_id'].count()
-
 
 
 app.layout = html.Div(
@@ -43,7 +31,7 @@ app.layout = html.Div(
                      {"label": "2018", "value": 2018}],
                  multi=False,
                  value=2013,
-                 style={'width': "30%", "display": "inline-block", "grid-gap": "10px",'backgroundColor': '#f0f0f0'}
+                 style={'width': "30%", "display": "inline-block", "grid-gap": "10px"}
                  ),
 
     dcc.Dropdown(id='type',
@@ -247,8 +235,7 @@ def city_list(causes,states,year):
     data2 = data.copy()
     new_dff = data2[(data2['state_code'] == states) & (data2['year'] == year) & (data2['cause'] == causes) ].groupby('city_or_county').count().reset_index()
     new_dff[['city_or_county','incident_id']]
-    print(new_dff.city_or_county)
-    print(new_dff.incident_id)
+    
     figs = px.bar(x=new_dff.city_or_county, y= new_dff.incident_id, title='Incidents by county',
                  color=new_dff.incident_id)
     return [figs]

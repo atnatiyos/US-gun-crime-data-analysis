@@ -1,5 +1,5 @@
-from gc import callbacks
-from msilib.schema import Component
+#from gc import callbacks
+#from msilib.schema import Component
 # from optparse import Option
 # from pickle import NONE
 # from tkinter.ttk import Style

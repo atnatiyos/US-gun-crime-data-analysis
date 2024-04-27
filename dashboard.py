@@ -6,6 +6,7 @@ from dash import Dash, dcc, html, Input, Output
 import state_code
 
 app = Dash(__name__)
+server = app.server
 
 data = pd.read_csv("https://docs.google.com/spreadsheets/d/1VCeWpaveQa3LbPjU59OqyCRBO5zmDXmsut4hU0VlNiQ/gviz/tq?tqx=out:csv&sheet=gun_violance".format('1VCeWpaveQa3LbPjU59OqyCRBO5zmDXmsut4hU0VlNiQ','gun_violance'))
 
